@@ -1,0 +1,315 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* ========== LAYOUT ========== */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background: white;
+  padding: 15px 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.content {
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 240px;
+  background: #111827;
+  color: white;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.sidebar-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #d1d5db;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+.sidebar-link.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+/* ========== COMMON CARD ========== */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ========== BUTTONS ========== */
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+.clear-btn {
+  background-color: #6b7280;
+}
+
+.clear-btn:hover {
+  background-color: #4b5563;
+}
+
+/* ========== FLEX UTILITY (used in AttendanceForm) ========== */
+.flex {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin : 15px 0px;
+}
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* ========== STATUS BADGES ========== */
+.status-present {
+  color: white;
+  background: #16a34a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status-absent {
+  color: white;
+  background: #dc2626;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ========== DASHBOARD ========== */
+.dashboard-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.dashboard-card {
+  flex: 1;
+  padding: 25px;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.dashboard-card.blue {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.dashboard-card.green {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content h4 {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card-content h2 {
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.card-icon {
+  font-size: 40px;
+}
+
+/* ========== ATTENDANCE PAGE ========== */
+.attendance-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.datatable-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* ========== EMPLOYEE PAGE ========== */
+.employee-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* ========== FORM CARD ========== */
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+}
+
+.form-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 2-column layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #6b7280;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* Submit button full width */
+.form-actions {
+  grid-column: span 2;
+  text-align: right;
+}
+
+.form-actions button {
+  padding: 10px 18px;
+  font-weight: 500;
+}
+

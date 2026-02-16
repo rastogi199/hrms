@@ -1,0 +1,14 @@
+# Node
+node_modules/
+build/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# VS Code
+.vscode/
